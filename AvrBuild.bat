@@ -1,0 +1,2 @@
+@ECHO OFF
+"E:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\labels.tmp" -fI -W+ie -C V2E -o "C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.hex" -d "C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.obj" -e "C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.eep" -m "C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.map" "C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm"

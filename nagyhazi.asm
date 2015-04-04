@@ -112,6 +112,18 @@ RESET:
 
 M_INIT:
 ;< ki- és bemenetek inicializálása stb > 
+.def temp2 = r18;temp2 reg
+ldi temp2, 0
+.def lift = r17 ; regiszter a lift futófényének
+ldi lift, 1 ;Betöltjük az egyet, mert kezdetben a lift a földszinten van
+ldi temp, 0xFF
+out DDRC, temp ; a C port irányát beállítjuk kimenetként
+ldi temp, 0x00 ; bemeneti irányt szeretnék a switcheknek
+sts DDRG, temp ; irány beállítása a switcheknek
+
+
+ldi temp, 1
+mov lift, temp
 
 
 ;*************************************************************** 
@@ -129,7 +141,10 @@ M_INIT:
 M_LOOP: 
 
 ;< fõciklus >
-
+	lds temp, PING ; a PING-bõl a kapcsolók temp-be
+	cpse temp, temp2 ; compare skip if equal, összehasonlítja, hogy minden switch 1-be van-e
+	call SWITCH ;ha változott valamelyik switch meghívja a switch szubrutint
+	out PORTC, lift ; az elsõ ledet bekapcsoljuk. Azaz a lift a földszinten vár
 
 	jmp M_LOOP ; Endless Loop  
 
@@ -137,7 +152,11 @@ M_LOOP:
 ;*************************************************************** 
 ;* Subroutines, Interrupt routines
 
-
+SWITCH:
+	cpse temp, lift
+	inc lift
+	ret
+	
 
 
 

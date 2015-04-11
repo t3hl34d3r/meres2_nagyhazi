@@ -23,7 +23,10 @@
   <DUMMY_IT><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>92</LINE></DUMMY_IT>
   <DUMMY_LOOP><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>97</LINE></DUMMY_LOOP>
   <M_INIT><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>113</LINE></M_INIT>
-  <M_LOOP><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>141</LINE></M_LOOP>
-  <SWITCH><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>155</LINE></SWITCH>
+  <M_LOOP><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>152</LINE></M_LOOP>
+  <SWITCH><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>166</LINE></SWITCH>
+  <GOMBRA><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>173</LINE></GOMBRA>
+  <GOMB_LE><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>181</LINE></GOMB_LE>
+  <GOMB_FEL><FILE>C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm</FILE><LINE>185</LINE></GOMB_FEL>
  </LABELS>
 </ASSEMBLER_INFO>

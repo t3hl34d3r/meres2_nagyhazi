@@ -121,6 +121,17 @@ out DDRC, temp ; a C port irányát beállítjuk kimenetként
 ldi temp, 0x00 ; bemeneti irányt szeretnék a switcheknek
 sts DDRG, temp ; irány beállítása a switcheknek
 
+.def gombra_var = r19
+ldi gombra_var, 0
+
+ldi temp, 0x00
+out DDRE, temp ; az E port irányát beállítjuk bemenetként
+
+.def gombok = r20
+ldi gombok, 0
+
+.def irany = r21
+ldi irany, 0
 
 ldi temp, 1
 mov lift, temp
@@ -155,7 +166,29 @@ M_LOOP:
 SWITCH:
 	cpse temp, lift
 	inc lift
+
+	cp temp, lift
+	breq GOMBRA
 	ret
+
+GOMBRA:
+	ldi gombra_var, 1
+	in gombok, PINE
+	andi gombok, 0b00010000
+	breq GOMB_LE
+	jmp GOMB_FEL
+	ret
+
+GOMB_LE:
+	lds temp, PING ;
+	ldi irany, 0
+	rjmp GOMB_VEGE
+
+GOMB_FEL:
+	lds temp, PING ;
+	ldi irany, 1
+
+GOMB_VEGE:
 	
 
 

@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm Sat Apr 04 11:39:08 2015
+AVRASM ver. 2.1.42  C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm Sat Apr 11 11:11:09 2015
 
 
 EQU  SIGNATURE_000 0000001e
@@ -875,5 +875,11 @@ CSEG DUMMY_LOOP   0000004a
 CSEG M_INIT       0000004f
 DEF  temp2        r18
 DEF  lift         r17
-CSEG M_LOOP       00000058
-CSEG SWITCH       00000060
+DEF  gombra_var   r19
+DEF  gombok       r20
+DEF  irany        r21
+CSEG M_LOOP       0000005d
+CSEG SWITCH       00000065
+CSEG GOMBRA       0000006a
+CSEG GOMB_LE      00000071
+CSEG GOMB_FEL     00000074

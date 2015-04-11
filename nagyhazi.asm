@@ -166,7 +166,7 @@ M_LOOP:
 SWITCH:
 	cpse temp, lift
 	inc lift
-
+	out PORTC, lift
 	cp temp, lift
 	breq GOMBRA
 	ret
@@ -189,7 +189,21 @@ GOMB_FEL:
 	ldi irany, 1
 
 GOMB_VEGE:
-	
+	cpi irany,0
+	jmp LEFELE
+
+FELFELE:
+	lds temp, PING ;
+	cpse temp, lift
+	inc lift
+	out PORTC, lift
+
+
+LEFELE:
+	lds temp, PING ;
+	cpse temp, lift
+	dec lift
+	out PORTC, lift
 
 
 

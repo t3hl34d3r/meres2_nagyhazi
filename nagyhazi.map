@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm Sat Apr 11 11:11:09 2015
+AVRASM ver. 2.1.42  C:\Users\Marton\Documents\meres2_nagyhazi\meres2_nagyhazi\nagyhazi.asm Sat Apr 11 11:22:49 2015
 
 
 EQU  SIGNATURE_000 0000001e
@@ -880,6 +880,9 @@ DEF  gombok       r20
 DEF  irany        r21
 CSEG M_LOOP       0000005d
 CSEG SWITCH       00000065
-CSEG GOMBRA       0000006a
-CSEG GOMB_LE      00000071
-CSEG GOMB_FEL     00000074
+CSEG GOMBRA       0000006b
+CSEG GOMB_LE      00000072
+CSEG GOMB_FEL     00000076
+CSEG GOMB_VEGE    00000079
+CSEG LEFELE       00000082
+CSEG FELFELE      0000007c

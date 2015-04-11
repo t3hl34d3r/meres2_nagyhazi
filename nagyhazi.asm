@@ -193,17 +193,19 @@ GOMB_VEGE:
 	jmp LEFELE
 
 FELFELE:
-	lds temp, PING ;
 	cpse temp, lift
 	inc lift
 	out PORTC, lift
+	cpse temp, lift
+	jmp FELFELE
 
 
 LEFELE:
-	lds temp, PING ;
 	cpse temp, lift
 	dec lift
 	out PORTC, lift
+	cpse temp, lift
+	jmp LEFELE
 
 
 

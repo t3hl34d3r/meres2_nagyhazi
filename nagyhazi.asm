@@ -187,6 +187,7 @@ GOMB_LE:
 GOMB_FEL:
 	lds temp, PING ;
 	ldi irany, 1
+	jmp FELFELE
 
 GOMB_VEGE:
 	cpi irany,0
